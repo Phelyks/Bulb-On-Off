@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <img id="myImage" src="image1.jpg" alt="Image 1">
+    <button onclick="changeImage()">Change Image</button>
+
+    <script>
+        function changeImage() {
+            var img = document.getElementById("myImage");
+            if (img.src.endsWith("image1.jpg")) {
+                img.src = "image2.jpg";
+                img.alt = "Image 2";
+            } else {
+                img.src = "image1.jpg";
+                img.alt = "Image 1";
+            }
+        }
+    </script>
+</body>
+</html>
