@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobe Deleted</title>
     <style>
-        #myButton {
-            background-color: lightblue;
+        .button {
+            background-color: red;
             color: black;
             padding: 10px 20px;
+            margin: 10px;
             border: none;
             cursor: pointer;
         }
 
-        #myButton:hover {
-            /* background-color: red; */
+        .button:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
-    <button id="myButton" onclick="changeButtonColors()">Click me</button>
+    <button id="button1" class="button" onclick="toggleButtonColors(1)">Button 1</button>
+    <button id="button2" class="button" onclick="toggleButtonColors(2)">Button 2</button>
 
     <script>
-        function changeButtonColors() {
-            var button = document.getElementById("myButton");
-            if (button.style.backgroundColor === "lightblue") {
-                button.style.backgroundColor = "lightgreen";
-                button.style.color = "white";
-            } else {
-                button.style.backgroundColor = "yellow";
-                button.style.color = "black";
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+
+        function toggleButtonColors(clickedButton) {
+            if (clickedButton === 1) {
+                button1.style.backgroundColor = "green";
+                button1.style.color = "white";
+                button2.style.backgroundColor = "red";
+                button2.style.color = "black";
+            } else if (clickedButton === 2) {
+                button1.style.backgroundColor = "red";
+                button1.style.color = "black";
+                button2.style.backgroundColor = "green";
+                button2.style.color = "white";
             }
         }
     </script>
-</body>
 </body>
 </html>
