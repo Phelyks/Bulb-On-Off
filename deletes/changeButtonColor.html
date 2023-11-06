@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobe Deleted</title>
+    <style>
+        #myButton {
+            background-color: lightblue;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #myButton:hover {
+            /* background-color: red; */
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton" onclick="changeButtonColors()">Click me</button>
+
+    <script>
+        function changeButtonColors() {
+            var button = document.getElementById("myButton");
+            if (button.style.backgroundColor === "lightblue") {
+                button.style.backgroundColor = "lightgreen";
+                button.style.color = "white";
+            } else {
+                button.style.backgroundColor = "yellow";
+                button.style.color = "black";
+            }
+        }
+    </script>
+</body>
+</body>
+</html>
